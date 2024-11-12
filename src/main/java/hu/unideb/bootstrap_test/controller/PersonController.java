@@ -16,16 +16,16 @@ import java.util.Optional;
 @Controller
 public class PersonController {
 
-//    @Autowired
-//    PersonRepository personRepository;
-//    private String redirectText;
-//
-//    @GetMapping("/persons")
-//    public String listAllPersons(Model model){
-//        List<Person> persons = personRepository.findAll();
-//        model.addAttribute("personsList", persons);
-//        return "persons";
-//    }
+    @Autowired
+    PersonRepository personRepository;
+    private String redirectText;
+    
+    @GetMapping("/persons")
+    public String listAllPersons(Model model){
+        List<Person> persons = personRepository.findAll();
+        model.addAttribute("personsList", persons);
+        return "persons";
+    }
 //
 //    @GetMapping("/persons/new")
 //    public String newPerson(Model model){
